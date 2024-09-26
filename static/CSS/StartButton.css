@@ -1,0 +1,81 @@
+@font-face {
+   font-family: 'genshin' ;
+   src: url('../font.woff') format('truetype');
+}
+h2{
+    font-size: larger !important;
+  font-family: 'genshin', san-serif;
+}
+.PlayButton {
+  font-family: 'genshin', san-serif;
+  border-radius: 10px;
+  background-color: green; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.PlayButton:hover {
+  background-color: white;
+  color: #4c4b4b;
+}
+
+.HomeArea{
+  text-shadow: 2px 2px 5px black;
+  position: absolute;
+  left: calc(50% - 30px);
+  top: 35%;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: -160px;
+  margin-top: -200px;
+  color: white;
+  font-family: monaco,Consolas,Lucida Console,monospace; 
+}
+
+.credits {
+  position: absolute;
+  left: calc(50% - 92px);
+  top: 91vh;
+  font-weight: 600;
+  color: white;
+  font-family: monaco,Consolas,Lucida Console,monospace;
+}
+
+a{
+  color: white;
+}
+
+.creator:hover .contactInfo {
+  visibility: visible;
+}
+
+.creator {
+  position: relative;
+  display: inline-block;
+  text-decoration: underline;
+}
+
+
+.creator .contactInfo {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-weight: 100;
+
+  /* Position the tooltip */
+  position: absolute;
+}

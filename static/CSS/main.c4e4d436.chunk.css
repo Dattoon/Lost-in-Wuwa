@@ -1,0 +1,524 @@
+body {
+    height: 100%;
+    background-color: rgba(17, 17, 17, .75);
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
+}
+
+.WuwaMapHome {
+    overflow: hidden;
+    height: 100%;
+    background-image: url(../../static/media/homebackground.66080df7.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.GenshinLogo {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 100%;
+    max-height: 125px;
+    max-width: 200px;
+    height: auto
+}
+
+.App {
+    text-align: center
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none
+}
+
+@media (prefers-reduced-motion:no-preference) {
+    .App-logo {
+        -webkit-animation: App-logo-spin 20s linear infinite;
+        animation: App-logo-spin 20s linear infinite
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #fff
+}
+
+.App-link {
+    color: #61dafb
+}
+
+@-webkit-keyframes App-logo-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes App-logo-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+h2 {
+    font-size: larger !important
+}
+
+.PlayButton,
+h2 {
+    font-family: "genshin", san-serif
+}
+
+.PlayButton {
+    border-radius: 10px;
+    background-color: green;
+    border: none;
+    color: #fff;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    margin: 4px 2px;
+    transition-duration: .4s;
+    cursor: pointer;
+    font-weight: 600
+}
+
+.PlayButton:hover {
+    background-color: #fff;
+    color: #4c4b4b
+}
+
+.HomeArea {
+    text-shadow: 2px 2px 5px #000;
+    left: calc(50% - 30px);
+    top: 35%;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: -160px;
+    margin-top: -200px
+}
+
+.credits,
+.HomeArea {
+    position: absolute;
+    color: #fff;
+    font-family: monaco, Consolas, Lucida Console, monospace
+}
+
+.credits {
+    left: calc(50% - 92px);
+    top: 91vh;
+    font-weight: 600
+}
+
+a {
+    color: #fff
+}
+
+.creator:hover .contactInfo {
+    visibility: visible
+}
+
+.creator {
+    position: relative;
+    display: inline-block;
+    text-decoration: underline
+}
+
+.creator .contactInfo {
+    visibility: hidden;
+    width: 200px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-weight: 100;
+    position: absolute
+}
+
+@font-face {
+    font-family: "genshin";
+    src: url(../../static/media/font.b3820491.woff) format("truetype")
+}
+
+.MainGame {
+    position: absolute;
+    background-color: #4c4b4b
+}
+
+#viewer,
+.MainGame {
+    height: 100%;
+    width: 100%
+}
+
+.gameInfo {
+    top: 10px;
+    position: absolute;
+    left: calc(100% - 200px);
+    height: 53px;
+    width: 190px;
+    border-radius: 10px;
+    z-index: 107;
+    background-color: rgba(40, 40, 40, .7)
+}
+
+.roundScoreCount {
+    top: 22px;
+    height: 35px;
+    z-index: 106;
+    font-size: large !important;
+    font-family: "genshin", san-serif
+}
+
+.roundScoreCount,
+.roundScoreCountLabel {
+    color: #fff;
+    padding-top: 3px;
+    position: absolute;
+    left: calc(100% - 190px);
+    width: 190px;
+    text-align: center
+}
+
+.roundScoreCountLabel {
+    -webkit-font-feature-settings: "smcp", "c2sc";
+    font-feature-settings: "smcp", "c2sc";
+    font-variant-caps: all-small-caps;
+    height: 12px;
+    z-index: 107;
+    font-size: large !important;
+    font-family: "genshin", san-serif
+}
+
+.mainMap {
+    cursor: context-menu !important;
+    margin-bottom: 60px;
+    height: 30%;
+    bottom: 22px;
+    min-width: 400px;
+    min-height: 150px;
+    max-width: 600px;
+    right: 15px;
+    z-index: 100;
+    background-color: rgba(40, 40, 40, .7);
+    text-align: center;
+    font-size: 23px;
+    position: absolute
+}
+
+.mapConainter {
+    border-radius: 10px;
+    height: 64vh;
+    bottom: 27vh;
+    margin-right: 31vw;
+    right: 15px;
+    background-color: rgba(0, 0, 0, .3);
+    font-size: 23px
+}
+
+.mapConainter,
+.scoreMap {
+    cursor: context-menu !important;
+    width: 45vw;
+    min-width: 400px;
+    min-height: 150px;
+    max-width: 900px;
+    z-index: 105;
+    text-align: center;
+    position: absolute
+}
+
+.scoreMap {
+    height: 45vh
+}
+
+#selectArea {
+    bottom: 30%;
+    margin-bottom: 83px;
+    height: 30px
+}
+
+#guessButton,
+#selectArea {
+    font-size: large !important;
+    font-family: "genshin", san-serif;
+    border-radius: 8px;
+    cursor: pointer;
+    border-width: 1px;
+    color: #fff;
+    min-width: 400px;
+    max-width: 600px;
+    right: 15px;
+    z-index: 101;
+    background-color: rgba(0, 130, 0, .8);
+    text-align: center;
+    font-size: 23px;
+    position: absolute
+}
+
+#guessButton {
+    margin-bottom: 30px;
+    height: 40px;
+    bottom: 12px
+}
+
+.scoreOverlay {
+    width: 100%;
+    height: 100%;
+    z-index: 102;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .6)
+}
+
+.roundEndedText {
+    margin-bottom: 60px;
+    height: 15vh;
+    bottom: 21vh;
+    width: 45vw;
+    min-width: 400px;
+    min-height: 90px;
+    max-width: 900px;
+    right: 15px
+}
+
+.nextRoundButton,
+.roundEndedText {
+    font-weight: 800;
+    z-index: 107;
+    font-size: large !important;
+    font-family: "genshin", san-serif;
+    color: #fff;
+    margin-right: 31vw;
+    text-align: center;
+    font-size: 22px;
+    position: absolute
+}
+
+.nextRoundButton {
+    cursor: pointer;
+    height: 38px;
+    bottom: 29vh;
+    width: 300px;
+    right: 15px;
+    border-width: 1px;
+    background: green;
+    border-radius: 10px;
+    right: 15vw
+}
+
+#guessButton:disabled {
+    color: hsla(0, 0%, 100%, .5);
+    background-color: rgba(0, 0, 0, .3)
+}
+
+.pointBarBorder {
+    top: 53vh;
+    width: 45vw;
+    min-width: 400px;
+    max-width: 900px;
+    z-index: 110;
+    background-color: #dcdcdc;
+    position: absolute
+}
+
+.pointBar,
+.pointBarBorder {
+    height: 30px;
+    border-radius: 10px
+}
+
+.pointBar {
+    background-color: rgb(222 184 4);
+    width: 43%
+}
+
+@media only screen and (min-width:2200px) {
+    .nextRoundButton {
+        cursor: pointer;
+        font-weight: 800;
+        z-index: 107;
+        font-size: large !important;
+        font-family: "genshin", san-serif;
+        height: 38px;
+        bottom: 29vh;
+        margin-right: 29vw;
+        width: 300px;
+        right: 15px;
+        text-align: center;
+        font-size: 22px;
+        position: absolute;
+        color: #fff;
+        border-width: 1px;
+        background: green;
+        border-radius: 10px;
+        right: 15vw
+    }
+}
+
+@media only screen and (max-height:700px) {
+    .nextRoundButton {
+        cursor: pointer;
+        font-weight: 800;
+        z-index: 107;
+        font-size: large !important;
+        font-family: "genshin", san-serif;
+        height: 38px;
+        bottom: 26vh;
+        margin-right: 29vw;
+        width: 300px;
+        right: 15px;
+        text-align: center;
+        font-size: 22px;
+        position: absolute;
+        color: #fff;
+        border-width: 1px;
+        background: green;
+        border-radius: 10px;
+        right: 15vw
+    }
+
+    .roundEndedText {
+        margin-bottom: 40px
+    }
+
+    .mapConainter {
+        height: 66vh;
+        bottom: 24vh
+    }
+}
+
+@media only screen and (max-width:1430px) {
+    .nextRoundButton {
+        right: 14vw
+    }
+}
+
+@media only screen and (max-width:1300px) {
+    .nextRoundButton {
+        right: 12vw
+    }
+}
+
+@media only screen and (max-width:1100px) {
+    .nextRoundButton {
+        right: 9vw
+    }
+}
+
+@media only screen and (max-height:635px) {
+    .nextRoundButton {
+        bottom: 23vh
+    }
+}
+
+@media only screen and (max-width:880px) {
+    .GenshinLogo {
+        display: none
+    }
+
+    .mainMap {
+        bottom: -10px
+    }
+
+    #selectArea {
+        margin-bottom: 53px !important
+    }
+
+    #guessButton {
+        bottom: -20px
+    }
+
+    .psv-navbar {
+        display: none !important
+    }
+
+    .psv-button {
+        display: none
+    }
+
+    .mapConainter,
+    .roundEndedText {
+        right: calc(50% - 400px)
+    }
+
+    .nextRoundButton {
+        right: calc(50% - 350px)
+    }
+}
+
+@media only screen and (max-width:500px) {
+
+    .mapConainter,
+    .roundEndedText {
+        right: calc(50% - 330px)
+    }
+
+    .nextRoundButton {
+        right: calc(50% - 285px)
+    }
+}
+
+@media only screen and (max-width:400px) {
+
+    #guessButton,
+    #selectArea,
+    .mainMap {
+        min-width: 350px;
+        right: 0
+    }
+}
+
+@media only screen and (max-width:380px) {
+    .nextRoundButton {
+        right: calc(50% - 250px)
+    }
+
+    .pointBarBorder {
+        min-width: 363px
+    }
+}
+
+.HomeAreaImg {
+    height: auto;
+    max-width: 100%
+}
+
+/*# sourceMappingURL=main.c4e4d436.chunk.css.map */
