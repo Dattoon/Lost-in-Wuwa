@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+            border: 1px solid red; /* Thêm đường viền để kiểm tra */
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Khởi tạo bản đồ
+        var map = L.map('map').setView([0, 0], 2);
+
+        // Thêm từng tile ảnh vào bản đồ với tọa độ chính xác
+        L.imageOverlay('/static/tiles/tile-0_0.jpg', [[0, 0], [1, 1]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile-0_-1.jpg', [[-1, 0], [0, 1]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile-0_-2.jpg', [[-2, 0], [-1, 1]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile-1_0.jpg', [[0, 1], [1, 2]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile--1_0.jpg', [[0, -1], [1, 0]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile-1_-1.jpg', [[-1, 1], [0, 2]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile--1_-1.jpg', [[-1, -1], [0, 0]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile-1_-2.jpg', [[-2, 1], [-1, 2]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile--1_-2.jpg', [[-2, -1], [-1, 0]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile-2_0.jpg', [[0, 2], [1, 3]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile--2_0.jpg', [[0, -2], [1, -1]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile-2_-1.jpg', [[-1, 2], [0, 3]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile--2_-1.jpg', [[-1, -2], [0, -1]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile-2_-2.jpg', [[-2, 2], [-1, 3]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile--2_-2.jpg', [[-2, -2], [-1, -1]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile--3_0.jpg', [[0, -3], [1, -2]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile--3_-1.jpg', [[-1, -3], [0, -2]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile--3_-2.jpg', [[-2, -3], [-1, -2]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile--4_0.jpg', [[0, -4], [1, -3]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile--4_-1.jpg', [[-1, -4], [0, -3]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile-1_1.jpg', [[1, 1], [2, 2]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile-0_1.jpg', [[1, 0], [2, 1]]).addTo(map);
+        L.imageOverlay('/static/tiles/tile--1_1.jpg', [[1, -1], [2, 0]]).addTo(map);
+
+        // Thêm các tile đen vào các vùng trống
+        
+
+        // Kiểm tra sự kiện lỗi khi tải tile
+        map.on('tileerror', function(error, tile) {
+            console.error('Tile loading error:', error);
+        });
+    </script>
+</body>
+</html>
